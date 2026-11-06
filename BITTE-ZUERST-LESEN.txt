@@ -1,0 +1,28 @@
+PAGEBLOOM – ORDNER FÜR WINDOWS
+================================
+
+1. ZIP-Datei herunterladen.
+2. In Windows mit der rechten Maustaste auf die ZIP-Datei klicken.
+3. "Alle extrahieren..." auswählen und "Extrahieren" drücken.
+4. Den entstandenen Ordner "PageBloom-ZUM-ENTPACKEN" öffnen.
+
+FÜR GITHUB: 
+- In dein GitHub-Repository PageBloom gehen.
+- Unter "Code" -> "Add file" -> "Upload files" die fünf Programmdateien
+  index.html, main.cjs, package.json, icon.png und icon.ico hochladen.
+- Sie müssen direkt in der obersten Ebene deines Repositories liegen.
+  Bitte NICHT den Ordner selbst als Unterordner hochladen.
+- Auf "Commit changes" klicken.
+
+DANACH GITHUB ACTIONS: 
+- Actions -> New workflow -> Set up a workflow yourself.
+- Dateiname oben: windows.yml
+  (im GitHub-Ordner .github/workflows/).
+- Die Datei "GITHUB-ACTIONS-CODE.txt" öffnen, nur den YAML-Code ab
+  "name: PageBloom Windows EXE" kopieren, im GitHub-Editor einfügen.
+- "Commit changes" klicken.
+- Actions -> PageBloom Windows EXE -> Run workflow.
+- Nach einem erfolgreichen Lauf unter "Artifacts" die Windows-Datei herunterladen.
+
+WICHTIG: Dieser Ordner ist QUELLCODE, noch keine fertige .exe.
+Die Windows-EXE wird erst durch den erfolgreichen GitHub-Actions-Lauf erstellt.

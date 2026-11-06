@@ -1,0 +1,43 @@
+{
+  "name": "pagebloom-desktop",
+  "version": "1.0.0",
+  "description": "PageBloom Studio – Buecher, 16:9 Praesentationen und Vortraege auf Windows",
+  "private": true,
+  "main": "main.cjs",
+  "author": "PageBloom",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "de.pagebloom.desktop",
+    "productName": "PageBloom",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.cjs",
+      "icon.png",
+      "icon.ico"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
